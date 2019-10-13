@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Qe9-Xe-q0e">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Car Directory-->
+        <scene sceneID="9tr-fH-JyE">
+            <objects>
+                <tableViewController id="10j-Ef-Gtx" customClass="CarsTableViewController" customModule="CarDirectory" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="3hJ-sD-To1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cell" textLabel="oOL-Nn-UJs" imageView="KfK-pl-FGd" style="IBUITableViewCellStyleDefault" id="fWu-Un-qFd">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fWu-Un-qFd" id="bRn-v7-L35">
+                                    <rect key="frame" x="0.0" y="0.0" width="383" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Car" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="oOL-Nn-UJs">
+                                            <rect key="frame" x="59" y="0.0" width="316" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="car" catalog="system" id="KfK-pl-FGd">
+                                            <rect key="frame" x="20" y="13" width="24" height="17.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </imageView>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="YlJ-2a-TN2" kind="show" identifier="toDetailSegue" id="Njd-u3-T4l"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="10j-Ef-Gtx" id="pj6-4B-E9k"/>
+                            <outlet property="delegate" destination="10j-Ef-Gtx" id="Oge-Ee-6ZC"/>
+                        </connections>
+                    </tableView>
+                    <toolbarItems>
+                        <barButtonItem image="plus" catalog="system" id="G7v-DI-CEl"/>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" title="Car Directory" id="s2s-WD-VoL">
+                        <barButtonItem key="rightBarButtonItem" image="plus" catalog="system" id="npN-Tj-Puo">
+                            <connections>
+                                <segue destination="YlJ-2a-TN2" kind="show" identifier="toAddSegue" id="clg-6h-PMi"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DBQ-WL-e3w" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="968" y="29"/>
+        </scene>
+        <!--Cars Detail Table View Controller-->
+        <scene sceneID="ASA-nl-Ry6">
+            <objects>
+                <tableViewController id="YlJ-2a-TN2" customClass="CarsDetailTableViewController" customModule="CarDirectory" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="N6u-Pn-4VF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="imageCell" rowHeight="100" id="zxY-wr-uqG" customClass="ImageCell" customModule="CarDirectory" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="100"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zxY-wr-uqG" id="QgL-ae-vDZ">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eaU-sw-Wie">
+                                            <rect key="frame" x="20" y="11" width="374" height="78"/>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailingMargin" secondItem="eaU-sw-Wie" secondAttribute="trailing" id="4YJ-md-gXZ"/>
+                                        <constraint firstItem="eaU-sw-Wie" firstAttribute="leading" secondItem="QgL-ae-vDZ" secondAttribute="leadingMargin" id="HtO-Pa-yOi"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="eaU-sw-Wie" secondAttribute="bottom" id="RSB-ut-coK"/>
+                                        <constraint firstItem="eaU-sw-Wie" firstAttribute="top" secondItem="QgL-ae-vDZ" secondAttribute="topMargin" id="ex2-gH-uVg"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="largeImageView" destination="eaU-sw-Wie" id="e6C-nJ-ecV"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="textFieldCell" id="Qub-Je-c0M" customClass="TextFieldCell" customModule="CarDirectory" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="128" width="414" height="56.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Qub-Je-c0M" id="CiT-h4-nYA">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="56.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nbe-o0-pQj">
+                                            <rect key="frame" x="20" y="11" width="374" height="34.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </textField>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottomMargin" secondItem="nbe-o0-pQj" secondAttribute="bottom" id="60O-GJ-erc"/>
+                                        <constraint firstItem="nbe-o0-pQj" firstAttribute="top" secondItem="CiT-h4-nYA" secondAttribute="topMargin" id="Dhp-io-f0i"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="nbe-o0-pQj" secondAttribute="trailing" id="HjC-RX-yE7"/>
+                                        <constraint firstItem="nbe-o0-pQj" firstAttribute="leading" secondItem="CiT-h4-nYA" secondAttribute="leadingMargin" id="zos-83-y44"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="textField" destination="nbe-o0-pQj" id="NzE-mP-FIc"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <sections/>
+                        <connections>
+                            <outlet property="dataSource" destination="YlJ-2a-TN2" id="eez-xf-skR"/>
+                            <outlet property="delegate" destination="YlJ-2a-TN2" id="72x-1Y-s1u"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="iRs-em-0uP">
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="save" id="ss2-ns-OC6"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="saveButton" destination="ss2-ns-OC6" id="Z57-LD-e6f"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ioI-kG-QbE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1770" y="29"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="NDn-Q2-9N9">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Qe9-Xe-q0e" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="feJ-DS-PGm">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="10j-Ef-Gtx" kind="relationship" relationship="rootViewController" id="dxG-0k-bRF"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I6z-bX-vHZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="196" y="29"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="car" catalog="system" width="64" height="46"/>
+        <image name="plus" catalog="system" width="64" height="56"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="clg-6h-PMi"/>
+    </inferredMetricsTieBreakers>
+</document>
