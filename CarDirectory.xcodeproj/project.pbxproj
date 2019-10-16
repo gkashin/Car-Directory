@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B3E242F2357954B00A76DB6 /* SectionImagePickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3E242E2357954B00A76DB6 /* SectionImagePickerController.swift */; };
 		5BDFB44F23531A1E00757994 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDFB44E23531A1E00757994 /* AppDelegate.swift */; };
 		5BDFB45123531A1E00757994 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDFB45023531A1E00757994 /* SceneDelegate.swift */; };
 		5BDFB45623531A1E00757994 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BDFB45423531A1E00757994 /* Main.storyboard */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5B3E242E2357954B00A76DB6 /* SectionImagePickerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionImagePickerController.swift; sourceTree = "<group>"; };
 		5BDFB44B23531A1E00757994 /* CarDirectory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarDirectory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BDFB44E23531A1E00757994 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5BDFB45023531A1E00757994 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -161,6 +163,7 @@
 		5BDFB4832356D7F400757994 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				5B3E242E2357954B00A76DB6 /* SectionImagePickerController.swift */,
 				5BDFB4842356D80C00757994 /* SectionTextField.swift */,
 			);
 			path = View;
@@ -239,6 +242,7 @@
 			files = (
 				5BDFB44F23531A1E00757994 /* AppDelegate.swift in Sources */,
 				5BDFB47B23534FC300757994 /* String+Extension.swift in Sources */,
+				5B3E242F2357954B00A76DB6 /* SectionImagePickerController.swift in Sources */,
 				5BDFB48023535B7C00757994 /* TextFieldCell.swift in Sources */,
 				5BDFB4852356D80C00757994 /* SectionTextField.swift in Sources */,
 				5BDFB47823532B5B00757994 /* CellManager.swift in Sources */,

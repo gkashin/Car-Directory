@@ -8,28 +8,45 @@
 
 import UIKit
 
-@objcMembers class Car: NSObject {
-    var image = UIImage()
-    var releaseYear = ""
-    var manufacturer = ""
-    var model = ""
-    var bodyType = ""
+@objcMembers class Car: NSObject, Codable {
+    var manufacturer: String
+    var model: String
+    var releaseYear: String
+    var bodyType: String
+    var image: Data?
+    
+    var encoded: Data? {
+        let encoder = PropertyListEncoder()
+        return try? encoder.encode(self)
+    }
+    
+    convenience init?(from data: Data) {
+        let decoder = PropertyListDecoder()
+        guard let car = try? decoder.decode(Car.self, from: data) else { return nil }
+        self.init(
+            releaseYear: car.releaseYear,
+            manufacturer: car.manufacturer,
+            model: car.model,
+            bodyType: car.bodyType,
+            imageData: car.image
+        )
+    }
     
     init(
         releaseYear: String = "",
         manufacturer: String = "",
         model: String = "",
         bodyType: String = "",
-        image: UIImage = UIImage()
+        imageData: Data? = Data()
     ) {
         self.releaseYear = releaseYear
         self.manufacturer = manufacturer
         self.model = model
         self.bodyType = bodyType
-        self.image = image
+        self.image = imageData
     }
     
-    var capitilizedKeys: [String] {
+    var capitalizedKeys: [String] {
         return keys.map { $0.capitalizedWithSpaces }
     }
     

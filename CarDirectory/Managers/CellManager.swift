@@ -12,6 +12,7 @@ class CellManager {
     
     func configure(_ cell: UITableViewCell, with car: Car) {
         cell.textLabel?.text = car.manufacturer
-        cell.imageView?.image = car.image
+        guard let data = car.image else { return }
+        cell.imageView?.image = UIImage(data: data)
     }
 }

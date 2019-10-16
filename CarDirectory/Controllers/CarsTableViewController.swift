@@ -10,14 +10,18 @@ import UIKit
 
 class CarsTableViewController: UITableViewController {
     
-    var cars: [Car] = []
+    var cars: [Car]! {
+        didSet {
+            storageManager.save(cars: cars)
+        }
+    }
     let storageManager = StorageManager()
     let cellManager = CellManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        cars = storageManager.loadCars()
+        cars = storageManager.load() ?? storageManager.loadCars()
     }
     
     // MARK: - UITableViewDataSource
