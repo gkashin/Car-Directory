@@ -28,7 +28,7 @@ class CarsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         
-        // Configure the cell’s contents.
+        // Configure the cell’s contents
         let car = cars[indexPath.row]
         cellManager.configure(cell, with: car)
         
@@ -62,5 +62,16 @@ class CarsTableViewController: UITableViewController {
         destination.car = cars[indexPath.row]
     }
     
-    // TODO: - Implement Unwind Segue
+    @IBAction func unwind(_ segue: UIStoryboardSegue) {
+        guard segue.identifier == "saveSegue" else { return }
+        let source = segue.source as! CarDetailTableViewController
+        let car = source.car
+        guard let selectedIndex = tableView.indexPathForSelectedRow else {
+            cars.append(car)
+            tableView.reloadData()
+            return
+        }
+        cars[selectedIndex.row] = car
+        tableView.reloadRows(at: [selectedIndex], with: .automatic)
+    }
 }

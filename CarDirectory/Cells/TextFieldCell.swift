@@ -9,5 +9,5 @@
 import UIKit
 
 class TextFieldCell: UITableViewCell {
-    @IBOutlet var textField: UITextField!
+    @IBOutlet weak var textField: SectionTextField!
 }

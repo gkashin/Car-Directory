@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Car: NSObject {
+@objcMembers class Car: NSObject {
     var image = UIImage()
     var releaseYear = ""
     var manufacturer = ""

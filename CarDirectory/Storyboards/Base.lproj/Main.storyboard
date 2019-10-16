@@ -61,10 +61,10 @@
             </objects>
             <point key="canvasLocation" x="968" y="29"/>
         </scene>
-        <!--Cars Detail Table View Controller-->
+        <!--Car Detail Table View Controller-->
         <scene sceneID="ASA-nl-Ry6">
             <objects>
-                <tableViewController id="YlJ-2a-TN2" customClass="CarsDetailTableViewController" customModule="CarDirectory" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="YlJ-2a-TN2" customClass="CarDetailTableViewController" customModule="CarDirectory" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="N6u-Pn-4VF">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -99,7 +99,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="56.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nbe-o0-pQj">
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nbe-o0-pQj" customClass="SectionTextField" customModule="CarDirectory" customModuleProvider="target">
                                             <rect key="frame" x="20" y="11" width="374" height="34.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits"/>
@@ -113,7 +113,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="textField" destination="nbe-o0-pQj" id="NzE-mP-FIc"/>
+                                    <outlet property="textField" destination="nbe-o0-pQj" id="UWD-F5-yjT"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -124,13 +124,18 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="iRs-em-0uP">
-                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="save" id="ss2-ns-OC6"/>
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" style="done" systemItem="save" id="ss2-ns-OC6">
+                            <connections>
+                                <segue destination="vc1-yW-hsm" kind="unwind" identifier="saveSegue" unwindAction="unwind:" id="wtx-A2-qhd"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="saveButton" destination="ss2-ns-OC6" id="Z57-LD-e6f"/>
+                        <outlet property="saveButton" destination="ss2-ns-OC6" id="zLq-mG-hZF"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ioI-kG-QbE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="vc1-yW-hsm" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1770" y="29"/>
         </scene>
@@ -158,6 +163,6 @@
         <image name="plus" catalog="system" width="64" height="56"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="clg-6h-PMi"/>
+        <segue reference="Njd-u3-T4l"/>
     </inferredMetricsTieBreakers>
 </document>

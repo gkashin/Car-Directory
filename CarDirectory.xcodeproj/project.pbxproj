@@ -21,6 +21,7 @@
 		5BDFB47D2353516F00757994 /* CarDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDFB47C2353516F00757994 /* CarDetailTableViewController.swift */; };
 		5BDFB48023535B7C00757994 /* TextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDFB47F23535B7C00757994 /* TextFieldCell.swift */; };
 		5BDFB48223535BAC00757994 /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDFB48123535BAC00757994 /* ImageCell.swift */; };
+		5BDFB4852356D80C00757994 /* SectionTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDFB4842356D80C00757994 /* SectionTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		5BDFB47C2353516F00757994 /* CarDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDetailTableViewController.swift; sourceTree = "<group>"; };
 		5BDFB47F23535B7C00757994 /* TextFieldCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldCell.swift; sourceTree = "<group>"; };
 		5BDFB48123535BAC00757994 /* ImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
+		5BDFB4842356D80C00757994 /* SectionTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 				5BDFB46823531BB800757994 /* Model */,
 				5BDFB46C23531C5B00757994 /* Resources */,
 				5BDFB46723531BAE00757994 /* Storyboards */,
+				5BDFB4832356D7F400757994 /* View */,
 			);
 			path = CarDirectory;
 			sourceTree = "<group>";
@@ -153,6 +156,14 @@
 				5BDFB47F23535B7C00757994 /* TextFieldCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		5BDFB4832356D7F400757994 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5BDFB4842356D80C00757994 /* SectionTextField.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,6 +240,7 @@
 				5BDFB44F23531A1E00757994 /* AppDelegate.swift in Sources */,
 				5BDFB47B23534FC300757994 /* String+Extension.swift in Sources */,
 				5BDFB48023535B7C00757994 /* TextFieldCell.swift in Sources */,
+				5BDFB4852356D80C00757994 /* SectionTextField.swift in Sources */,
 				5BDFB47823532B5B00757994 /* CellManager.swift in Sources */,
 				5BDFB46323531AE000757994 /* CarsTableViewController.swift in Sources */,
 				5BDFB48223535BAC00757994 /* ImageCell.swift in Sources */,

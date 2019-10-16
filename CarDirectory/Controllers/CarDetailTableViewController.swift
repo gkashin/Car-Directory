@@ -19,6 +19,11 @@ class CarDetailTableViewController: UITableViewController {
 
     }
     
+    // MARK: - UI
+    func updateUI() {
+        
+    }
+    
     // MARK: - UITableViewDataSource
     override func numberOfSections(in tableView: UITableView) -> Int {
         return car.keys.count
@@ -51,8 +56,25 @@ extension CarDetailTableViewController {
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "textFieldCell") as! TextFieldCell
             let stringValue = value as? String
+            cell.textField.addTarget(self, action: #selector(textFieldValueChanged(_:)), for: .editingChanged)
             cell.textField.text = stringValue
+            cell.textField.section = indexPath.section
             return cell
+        }
+    }
+}
+
+// MARK: - Actions
+extension CarDetailTableViewController {
+    @objc func textFieldValueChanged(_ sender: SectionTextField) {
+        let key = car.keys[sender.section!]
+        let text = sender.text ?? ""
+        car.setValue(text, forKey: key)
+        
+        // TODO: - Setup save button appropriate
+        
+        if car.value(forKey: "manufacturer") {
+            saveButton.isEnabled = true
         }
     }
 }
