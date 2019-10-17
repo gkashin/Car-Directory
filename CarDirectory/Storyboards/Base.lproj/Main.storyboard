@@ -65,20 +65,23 @@
         <scene sceneID="ASA-nl-Ry6">
             <objects>
                 <tableViewController id="YlJ-2a-TN2" customClass="CarDetailTableViewController" customModule="CarDirectory" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="N6u-Pn-4VF">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="N6u-Pn-4VF">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="imageCell" id="zxY-wr-uqG" customClass="ImageCell" customModule="CarDirectory" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="22.5"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="imageCell" rowHeight="100" id="zxY-wr-uqG" customClass="ImageCell" customModule="CarDirectory" customModuleProvider="target">
+                                <rect key="frame" x="20" y="55.5" width="374" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zxY-wr-uqG" id="QgL-ae-vDZ">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="22.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="374" height="100"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eaU-sw-Wie">
-                                            <rect key="frame" x="20" y="11" width="374" height="0.5"/>
+                                            <rect key="frame" x="20" y="11" width="334" height="78"/>
+                                        </imageView>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add" translatesAutoresizingMaskIntoConstraints="NO" id="ig7-O8-W4Y">
+                                            <rect key="frame" x="303" y="31" width="100" height="100"/>
+                                            <color key="tintColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         </imageView>
                                     </subviews>
                                     <constraints>
@@ -86,6 +89,8 @@
                                         <constraint firstItem="eaU-sw-Wie" firstAttribute="leading" secondItem="QgL-ae-vDZ" secondAttribute="leadingMargin" id="HtO-Pa-yOi"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="eaU-sw-Wie" secondAttribute="bottom" id="RSB-ut-coK"/>
                                         <constraint firstItem="eaU-sw-Wie" firstAttribute="top" secondItem="QgL-ae-vDZ" secondAttribute="topMargin" id="ex2-gH-uVg"/>
+                                        <constraint firstAttribute="bottom" secondItem="ig7-O8-W4Y" secondAttribute="bottom" constant="-31" id="q61-iG-RJo"/>
+                                        <constraint firstAttribute="trailing" secondItem="ig7-O8-W4Y" secondAttribute="trailing" constant="-29" id="s4J-8E-aeh"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
@@ -93,14 +98,14 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="textFieldCell" id="Qub-Je-c0M" customClass="TextFieldCell" customModule="CarDirectory" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="50.5" width="414" height="56.5"/>
+                                <rect key="frame" x="20" y="155.5" width="374" height="56.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Qub-Je-c0M" id="CiT-h4-nYA">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="56.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="374" height="56.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nbe-o0-pQj" customClass="SectionTextField" customModule="CarDirectory" customModuleProvider="target">
-                                            <rect key="frame" x="20" y="11" width="374" height="34.5"/>
+                                            <rect key="frame" x="20" y="11" width="334" height="34.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits"/>
                                         </textField>
@@ -137,7 +142,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ioI-kG-QbE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="vc1-yW-hsm" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1770" y="29"/>
+            <point key="canvasLocation" x="1769.5652173913045" y="28.794642857142854"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="NDn-Q2-9N9">
@@ -159,6 +164,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="add" width="100" height="100"/>
         <image name="car" catalog="system" width="64" height="46"/>
         <image name="plus" catalog="system" width="64" height="56"/>
     </resources>

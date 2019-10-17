@@ -37,7 +37,7 @@ import UIKit
         manufacturer: String = "",
         model: String = "",
         bodyType: String = "",
-        imageData: Data? = Data()
+        imageData: Data? = UIImage(named: "default")?.pngData()
     ) {
         self.releaseYear = releaseYear
         self.manufacturer = manufacturer

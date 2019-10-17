@@ -124,9 +124,7 @@ extension CarDetailTableViewController: UIImagePickerControllerDelegate {
         guard let section = sectionPicker.section else { return }
         let key = car.keys[section]
         let data = image.pngData()
-        
         car.setValue(data, forKey: key)
-        
         let indexPath = IndexPath(row: 0, section: section)
         tableView.reloadRows(at: [indexPath], with: .automatic)
         
@@ -138,5 +136,4 @@ extension CarDetailTableViewController: UIImagePickerControllerDelegate {
 extension CarDetailTableViewController: UINavigationControllerDelegate {}
 
 
-// TODO: - Sort out with image picker controller
-// add stubs for two images (add and default car)
+// TODO: - Add keyboard removing

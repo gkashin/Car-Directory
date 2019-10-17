@@ -21,7 +21,7 @@ class CarsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        cars = storageManager.load() ?? storageManager.loadCars()
+        cars = storageManager.loadCars()
     }
     
     // MARK: - UITableViewDataSource
