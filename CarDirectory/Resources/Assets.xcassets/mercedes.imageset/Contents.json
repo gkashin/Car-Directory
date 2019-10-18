@@ -2,11 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "nissan.jpeg",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "mercedes.jpg",
       "scale" : "2x"
     },
     {

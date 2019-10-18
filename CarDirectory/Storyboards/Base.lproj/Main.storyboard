@@ -29,7 +29,7 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="car" catalog="system" id="KfK-pl-FGd">
+                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" insetsLayoutMarginsFromSafeArea="NO" image="car" catalog="system" adjustsImageSizeForAccessibilityContentSizeCategory="YES" id="KfK-pl-FGd">
                                             <rect key="frame" x="20" y="13" width="24" height="17.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </imageView>

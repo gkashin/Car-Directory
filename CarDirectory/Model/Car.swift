@@ -9,17 +9,34 @@
 import UIKit
 
 @objcMembers class Car: NSObject, Codable {
+    // MARK: - Stored Properties
     var manufacturer: String
     var model: String
     var releaseYear: String
     var bodyType: String
     var image: Data?
     
+    // MARK: - Computed Properties
     var encoded: Data? {
         let encoder = PropertyListEncoder()
         return try? encoder.encode(self)
     }
     
+    var capitalizedKeys: [String] {
+        return keys.map { $0.capitalizedWithSpaces }
+    }
+    
+    // Fields of Car class for dynamically changes of table
+    var keys: [String] {
+        return Mirror(reflecting: self).children.compactMap { $0.label }
+    }
+    
+    // Values of Car class fields for dynamically changes of table
+    var values: [Any?] {
+        return Mirror(reflecting: self).children.map { $0.value }
+    }
+    
+    // MARK: - Initializers
     convenience init?(from data: Data) {
         let decoder = PropertyListDecoder()
         guard let car = try? decoder.decode(Car.self, from: data) else { return nil }
@@ -44,17 +61,5 @@ import UIKit
         self.model = model
         self.bodyType = bodyType
         self.image = imageData
-    }
-    
-    var capitalizedKeys: [String] {
-        return keys.map { $0.capitalizedWithSpaces }
-    }
-    
-    var keys: [String] {
-        return Mirror(reflecting: self).children.compactMap { $0.label }
-    }
-    
-    var values: [Any?] {
-        return Mirror(reflecting: self).children.map { $0.value }
     }
 }
