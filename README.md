@@ -9,6 +9,6 @@ The Application stores a list of cars and includes:
 * Car removal
 
 ### *Main screen:*
-![alt text](https://a.radikal.ru/a42/1910/a9/153d7a047bad.png)
+![alt text](https://b.radikal.ru/b05/1910/f3/49d5808d0ced.png)
 ### *Detail screen:*
-![alt text](https://d.radikal.ru/d21/1910/75/a20ec977a776.png)
+![alt text](https://d.radikal.ru/d02/1910/94/c544f56e5dfa.png)
